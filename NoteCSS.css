@@ -44,8 +44,72 @@ h2{
 */
 
 
-/* (3: CSS padding, border, margin) 
+/* (4: CSS padding, border, margin) 
     - Compare to between Padding and Margin
+    - Border và padding làm tăng tổng kích thước của element
+    - margin mục đích tạo khoảng các với các element khác (không làm tăng kích thước của element)
+*/
+
+.border{
+    border-width: 10px;
+    border-style: solid; /* default with là 2x */
+    border-radius: 5px;
+    border-color: brown;
+}
+
+
+
+/* (5. CSS Box-sizing 
+    box-sizing: border-box; giữ nguyên tổng kích thước của element, khi mà padding or border không quá lớn )
+*/
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+    padding: 16px;
+    border: 2px solid #333;
+    box-sizing: border-box; /* Tổng element box được giữ nguyên là 100px. Nhưng content chỉ còn 64px (vì -2*16px padding- 2*2px border) */
+}
+
+
+/* (6. background-clip 
+    Mục đích chỉ đổi màu background cho content. Hay padding + content. Hay (border + padding + content)
+    VD: Muốn đổ màu background chỉ cho content thôi (ko có padding và border)
+*/
+
+.backgroundclip{
+    /* background-clip sử dụng cho background-color */
+    background-clip: border-box; /* background for border + padding + content */
+    background-clip: padding-box; /* background for  padding + content */
+    background-clip: content-box; /* background for  only content */
+}
+
+
+/* 7. CSS background-image 
+    - background-size
+        - contain: thay đổi kích thước đảm bảo tỷ lệ kích thước ảnh hiển thị đầy đủ.
+        - cover: Thay đổi kích thước hình nền để bao phủ toàn bộ vùng chứa, ngay cả khi nó phải kéo dài hình ảnh hoặc cắt một chút khỏi một trong các cạnh
+*/
+
+.backgroundimage{
+    background-image: linear-gradient(95deg, red, rgba(255, 255, 0, 0.5)), url(imagelink01);
+    background-image: url(imagelink), url(imagelink02);
+    background-size: auto; /* https://developer.mozilla.org/en-US/docs/Web/CSS/background-size */
+    background-repeat: no-repeat; /* repeat-x or repeat-y  */
+
+    /* background-origin giống với background-clip
+         - background-origin sử dụng cho background-image
+         - background-clip sử dụng cho background-color */
+    background-origin: content-box;
+    background-position: top -20px right 20%;
+}
+
+
+/* (8. CSS function
+    -var(), linear-gradient(), rgba(), rgb(), calc(), attr()
+        - rgba(): có thông số anpha để tạo màu trong suốt
+        - attr(): sử dụng với lớp giả ( ::after, ::before)
 */
 
 
@@ -54,3 +118,10 @@ h2{
 
 
 
+
+
+
+
+
+
+ 
