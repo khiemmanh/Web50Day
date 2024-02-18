@@ -1,0 +1,56 @@
+/* (1. Flexbox trong CSS
+https://viblo.asia/p/giai-thich-hoat-dong-cua-flexbox-thong-qua-anh-gif-ByEZkp14lQ0 )
+*/
+.container{
+    display: flex;
+    flex-direction: column-reverse; /* change main axis is row or colume */
+    justify-content: flex-start; /* căn chỉnh các items trên main axis, căn giữa thì cần set hight cho container */
+    align-items: flex-end;
+    flex-wrap: wrap-reverse; /* item bị wrap sẽ lên trên */
+    height: 90hv; /* 90% khung nhìn: 90vw */
+    transition: flex 0.7s ease-in;
+
+}
+
+.item{
+    align-self: flex-end;
+    margin: auto;
+}
+
+
+/* 2. CSS Variable - Cách đặt biến trong CSS */
+:root{
+    /* Đây là biến Global, dùng được mọi nơi trong file .css */
+    --text-color: green;
+}
+
+h1{
+    color: var(--text-color);
+}
+
+h2{
+    /* Đây là biến local */
+    --my-color: red;
+    color: var(--my-color);
+}
+
+/* (3. CSS Unit - các đơn vị trong CSS
+    - Absolute units(px, pt, cm, mm, inch, pc) = tuyệt đối, không bị thay đổi
+    - Relative units(%, rem, em, vw, vh, vmin, vmax, ex, ch) - tương đối, kích thước sẽ bị thay đổi
+        - vh: viewport hight
+        - vw: viewport width
+        - rem: 1 đơn vị phục thuộc vào thẻ html
+        - em: 1 đơn vị phụ thuộc vào thẻ cha gần nhất chứa nó đã được định nghĩa (VD thẻ cha định nghĩa font-size: 50px))
+*/
+
+
+/* (3: CSS padding, border, margin) 
+    - Compare to between Padding and Margin
+*/
+
+
+
+
+
+
+
