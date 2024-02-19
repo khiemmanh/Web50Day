@@ -147,9 +147,9 @@ h1::selection{
 
 /* 11. CSS Position 
     - Relative: Sẽ lấy chính vị trí của đối tượng đó làm mốc mà không bị phụ thuộc đối tượng nào khác.
-    - Absolute
-    - Fixed
-    - Sticky
+    - Absolute: Một đối tượng phụ thuộc vào một đối tượng khác
+    - Fixed: Một đối tượng phụ thuộc và browser
+    - Sticky: Bám dính, khác với Fixed, VD khi đối tượng di chuyển từ giữa lên top:0 thì sẽ bị fix lại giống thuộc tính fixed
 
     https://youtu.be/h1No10BHI5Y?si=xEoYhUZx9MN1GSXT
 */
@@ -161,6 +161,60 @@ h1::selection{
     position: relative;
     top: 50px;
     left: 50px;
+}
+
+.h2{
+    /* Phụ thuộc vào thẻ cha gần nhất có thuộc tính position (không nhất thiết phải là relative)
+    Được sử dụng khi có một thẻ con cần được di chuyển quanh một thẻ cha là relative
+    VD: Khi click và nút thông báo thì có popup hiện nên
+        - khi đó popup hiện nên là thẻ absolute
+        - icon quả chuông sẽ là thẻ cha dùng relative 
+        (tại sao thẻ này lại cần relative vì thẻ popup đã là absolute nên cần thẻ cha gần nhất có thuộc tính position)  
+        */
+    background-image: url(./Common/image_NoteCSS/11.absolute_phụ_thuộc_vào_thẻ_có_thuộc_tính_position_gần_nhất.png);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    /* top và left sẽ được ưu tiên nếu có cả 4 thuộc tính(top, left, right, bottom) */
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    /* Nếu muốn thẻ absolute có kích thước bằng thẻ cha thì:
+        - Không cần set width, hight
+        - Set top, left, right, bottom: 0     
+    */
+}
+
+
+/* 12. CSS FlexBox 
+    - https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
+    
+*/
+
+h1{
+    background-image: url(./Common/image_NoteCSS/12_CSS_FlexBox_model.png);
+
+    display: flex;
+    flex-direction: column; /* defalt is row */
+    flex-wrap: wrap; /*  
+        - wrap-reverse: item bị wrap sẽ di chuyển lên trên
+        - wrap: item bị wrap sẽ di chuyển xuống dưới */
+    flex-basis: 50px; /* dùng để set size cho main_size */
+    justify-content: center; /*  căn chỉnh các item theo chiều main_axit (default là theo chiều ngang)
+        Dùng cho element cha (flex_container)
+        - flex-start
+        - flex-end
+        - center
+        - space-between: chia đều khoảng các giữa các item, nhưng 2 item ngoài cùng không có khoảng cách
+        - space-around: có chia khoảng cách cho 2 bên cạnh */
+    justify-self: center; /* 
+        Sử dụng cho element con (flex_item) 
+        - flex-start
+        - flex-end
+        - center */
+
 }
 
 
