@@ -125,14 +125,46 @@ h1:hover{
 }
 
 
+/* 10. CSS pseudo-element - phần tử giả 
+    - ::before
+    - ::after
+    - ::first-letter
+    - ::first-line
+    - ::selection
+
+    Có thể tạo ra thêm element mà không cần phải thêm thẻ html
+*/
+
+h1::first-letter{
+    font-size: 50px; /* Chữ cái đầu tiên sẽ là có size to hơn (VD: CSS thì chữ 'C' có size lớn nhất) */
+}
+
+h1::selection{
+    background-color: beige;
+    /* Nếu click trái chuột và chọn các text của thẻ h1 này thì background-color sẽ bị đổi nàu */
+}
+
+
+/* 11. CSS Position 
+    - Relative: Sẽ lấy chính vị trí của đối tượng đó làm mốc mà không bị phụ thuộc đối tượng nào khác.
+    - Absolute
+    - Fixed
+    - Sticky
+
+    https://youtu.be/h1No10BHI5Y?si=xEoYhUZx9MN1GSXT
+*/
+
+.h1{
+    /* So sánh với margin?
+    Khác với margin là nó di chuyển top, left, right,.. không là ảnh hưởng đến các element khác
+    Mà nó sẽ đè lên trên các element còn lại */
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
 
 
 
 
 
 
-
-
-
-
- 
