@@ -112,6 +112,17 @@ h2{
         - attr(): sử dụng với lớp giả ( ::after, ::before)
 */
 
+/* (9. CSS pseudo-classes - lớp giả 
+    - :root tham chiếu đến <html> elment 
+    - :hover
+    - :active chỉ được kích hoạt khi click và giữ chuột vào element
+    - :first-child
+    - :last-child )
+*/
+
+h1:hover{
+    color: brown;
+}
 
 
 
