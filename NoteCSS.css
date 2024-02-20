@@ -190,19 +190,24 @@ h1::selection{
 
 /* 12. CSS FlexBox 
     - https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
-    
+    - Căn giữa item
 */
 
 h1{
-    background-image: url(./Common/image_NoteCSS/12_CSS_FlexBox_model.png);
+    background-image: 
+        url(./Common/image_NoteCSS/12_CSS_FlexBox_model.png),
+        url(./Common/image_NoteCSS/12_flex-basis.png);
 
     display: flex;
     flex-direction: column; /* defalt is row */
     flex-wrap: wrap; /*  
         - wrap-reverse: item bị wrap sẽ di chuyển lên trên
         - wrap: item bị wrap sẽ di chuyển xuống dưới */
-    flex-basis: 50px; /* dùng để set size cho main_size */
-    justify-content: center; /*  căn chỉnh các item theo chiều main_axit (default là theo chiều ngang)
+    flex-basis: 50px; /* 
+        Dùng để set size cho main_size 
+        - 30% */
+    justify-content: center; /*  
+        Căn chỉnh các item theo chiều main_axit (default là theo chiều ngang)
         Dùng cho element cha (flex_container)
         - flex-start
         - flex-end
@@ -214,7 +219,38 @@ h1{
         - flex-start
         - flex-end
         - center */
+    align-content: center; /*
+        Căn chỉnh các item theo chiều cross_axit (defalt là theo chiều dọc,
+        kết hợp với justify-content: center -> item sẽ nằm chính giữa container) 
+        - flex-start
+        - flex-end
+        - center */
+    align-self: center; /* 
+        - Giống với align-content, nhưng được sử dụng cho element con(flex_item) */
+    flex-grow: 50px; /*
+        Giúp tăng đổi kích thước của main_size(của flex-item) */
+    flex-shrink: 50px; /* 
+        Ngược lại với flex-grow, làm giảm kích thước của flex-item */
+    flex: 1; /*
+        Viết tắt của: flex-basis, flex-grow, flex-shrink */
+    order: 1; /* 
+        Quyết định thứ tự của flex-item nào trước hay sau  */
+    flex-flow: column; /* 
+        Viết tắt của: flex-wrap và flex-direction */
 
+}
+
+/* Ví dụ về căn giữa 1 item */
+
+.div-container{
+    background-image: url(./Common/image_NoteCSS/12_centrer_element_can_giua_doi_tuong.png);
+    width: 50px;
+    height: 50px;
+    display: flex;
+}
+
+.h3-flex-item{
+    margin: auto;
 }
 
 
