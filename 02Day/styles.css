@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --liner-border-fill: #3498db;
+    --liner-border-entry: #e0e0e0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container{
+    text-align: center;
+}
+
+.progress-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    width: 350px;
+    max-width: 100%;
+    /* Mục đích để làm làm mốc cho đường kẻ ngang khi set class .progress là absolute */
+    position: relative;
+}
+
+.progress-container::before{
+    content: '';
+    position: absolute;
+    background-color: var(--liner-border-entry);
+    top: 50%;
+    transform: translateY(-50%); /* đường kẻ ngang nằm chính giữa text */
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 4px;
+}
+
+.progress-container .progress{
+    /* tạo thanh ngang */
+    position: absolute;
+    background-color: var(--liner-border-fill);
+    top: 50%;
+    transform: translateY(-50%); /* đường kẻ ngang nằm chính giữa text */
+    left: 0;
+    z-index: -1;
+    width: 0%;
+    height: 4px;
+    transition: 0.5s ease;
+}
+
+.circle{
+    text-align: center;
+    background-color: #fff;
+    /* Text color */
+    color: #999;
+
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    /* Căn chỉnh số chính giữa vòng tròn background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 3px solid var(--liner-border-entry);
+    transition: 0.4s ease;
+}
+
+.active{
+    border-color: var(--liner-border-fill);
+    /* background-color: var(--liner-border-fill); */
+}
+
+.btn{
+    background-color: var(--liner-border-fill);
+    color: #fff;
+    border: 0; /* Because default border is 2px */ 
+    border-radius: 6px;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn:active{
+    /* khi click vào button thì size sẽ nhỏ lại */
+    transform: scale(0.98);
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn:disabled{
+    background-color: var(--liner-border-entry);
+    cursor: not-allowed;
+}
