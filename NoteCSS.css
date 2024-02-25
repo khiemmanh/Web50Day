@@ -254,6 +254,22 @@ h1{
 }
 
 
+/* 13. HTML display value (Block and Inline Element) 
+    Text-aline có thể ảnh hưởng đến các element nào:
+        - Block-Level: 
+            - <div>, <p>, <header>, <footer>, <section>,
+            - Các text bên trong sẽ bị ảnh hưởng
+        - Inline-Level:
+            - <span>, <a>, <strong>, <em>
+            - khi áp dụng text-aline chỉ có text bên trong phần tử bị ảnh hưởng, chứ ko phải toàn bộ element
+        - Inline-Block:
+            - chỉ căn chỉnh văn bản trong element
+        => Tóm lại, text-align ảnh hưởng đến các phần tử chứa văn bản (kể cả phần tử block-level, inline-level và inline-block) 
+        trong khi văn bản đó không phải là một phần tử inline-level độc lập.
+*/
+
+
+
 
 
 
