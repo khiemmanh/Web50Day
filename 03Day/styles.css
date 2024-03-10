@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    /* justify-content: center; */
+    /* height: 100vh; */
+    /* align-items: center; */
+    overflow: hidden;
+}
+
+.container-icon{
+    /* font-size: 100px; */
+}
+
+.content{
+    background-color: burlywood;
+    padding: 50px;
+    /* width: 100vw;
+    height: 90vh; */
+}
