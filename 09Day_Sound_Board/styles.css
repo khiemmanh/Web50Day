@@ -15,12 +15,14 @@ body{
     overflow: hidden;
 }
 
-.container {
+.container .buttons {
     display: flex;
     width: 80vw;
 }
 
-.container button {
+
+ 
+.container .buttons .btn {
     display: flex;
     justify-content: center;
     align-items: center;

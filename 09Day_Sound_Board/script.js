@@ -1,3 +1,4 @@
+// my code
 const btn = document.querySelectorAll(".btn1");
 const audio1 = document.getElementById("audio1");
 
@@ -8,4 +9,24 @@ btn.forEach((el) => {
     });
 
 });
+
+
+// follow
+
+const btnNames = ['audio01', 'audio02', 'audio03',  'audio04', 'audio05', 'audio06'];
+// JS_NOTE: Different between HTMLCollection and Node
+const buttons = document.querySelector(".buttons");
+// console.log(btnNames);
+
+btnNames.forEach(el => {
+    const btn = document.createElement("button");
+    btn.innerText = el;
+    btn.classList.add("btn");
+    btn.classList.add(`${el}`);
+
+    buttons.appendChild(btn);
+    console.log(btn);
+});
+
+console.log(buttons);
 
