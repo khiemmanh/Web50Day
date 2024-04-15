@@ -79,3 +79,38 @@ body{
     margin-top: 30px;
 }
 
+/* waves animation */
+span {
+    margin: 0;
+    padding: 0;
+}
+
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* CSS_NOTE: Check when click input elment to change other element */
+/* CSS_NOTE: Sự khác nhau giữa :focus và :active */
+.form-control input:focus + label span,
+.form-control input:valid + label span{
+    color: lightblue;
+    transform: translateY(-30px);
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
