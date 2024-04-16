@@ -19,14 +19,33 @@ const buttons = document.querySelector(".buttons");
 // console.log(btnNames);
 
 btnNames.forEach(el => {
+    console.log(el);
     const btn = document.createElement("button");
     btn.innerText = el;
     btn.classList.add("btn");
     btn.classList.add(`${el}`);
 
+    //play audio
+    btn.addEventListener("click", (ev) => {
+        // console.log(el);
+        const audio = document.querySelector("." + el);
+
+        resetAllAudio(buttons);
+        audio.play();
+        // console.log(audio);
+    });
+
     buttons.appendChild(btn);
-    console.log(btn);
+    // console.log(btn);
 });
 
-console.log(buttons);
+function resetAllAudio() {
+    btnNames.forEach(el => {
+        const audio = document.querySelector("." + el);
+        audio.pause();
+        audio.currentTime = 0;
+    });
+}
+
+// console.log(buttons);
 
