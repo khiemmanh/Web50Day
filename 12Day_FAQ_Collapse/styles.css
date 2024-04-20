@@ -7,12 +7,86 @@
 
 body{
     display: flex;
-    justify-content: center;
-    height: 100vh;
+    flex-direction: column;
     align-items: center;
-    overflow: hidden;
+    justify-content: center;
+    /* height: 100vh; */
+    /* overflow: hidden; */
+    margin: 0;
 }
 
+h1 {
+    text-align: center;
+    margin: 50px 0 30px;
+}
+
+.faq-container {
+    margin: 0 auto;
+    /* max-width: 600px; */
+    max-width: 95%;
+    width: 600px;
+
+}
+
+.faq {
+    background-color: transparent;
+    border: 1px solid #9fa4a8;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.faq.active {
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq.active::after,
+.faq.active::before {
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    color: #2ecc71;
+    font-size: 7rem;
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.faq.active::after {
+    color: #3498db;
+    top:  -10px;
+    left: -30px;
+    transform: rotateY(180deg);
+}
+
+
+button i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.title {
+    margin: 0 30px 0 0;
+}
+
+.anwser {
+    display: none;
+    margin: 30px 0 0;
+}
+
+.faq.active .anwser {
+    display: block;
+}
+
+
+
+/* 
 .container h3{
     text-align: center;
     margin-bottom: 20px;
@@ -27,7 +101,6 @@ details {
     content: none;
 }
 
-/* Hide the default markers for the summary */
 details summary::-webkit-details-marker {
     display: none;
 }
@@ -54,4 +127,4 @@ details[open] summary::after{
 
 details[open] div {
     padding: .5em 1em;
-}
+} */
