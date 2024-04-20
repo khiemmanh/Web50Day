@@ -12,3 +12,46 @@ body{
     align-items: center;
     overflow: hidden;
 }
+
+.container h3{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+details {
+    background-color: chocolate;
+    padding: 20px 10px;
+    border-radius: 20px;    
+    min-width: 600px;
+    cursor: pointer;
+    content: none;
+}
+
+/* Hide the default markers for the summary */
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+summary {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    transition: height 1s ease;
+}
+
+summary::after {
+    content: "\002B";
+}
+
+details[open] summary {
+    border-bottom:  1px solid #aaa;
+    margin-bottom: .5em;
+}
+
+details[open] summary::after{
+    content: "\00D7";
+}
+
+details[open] div {
+    padding: .5em 1em;
+}
