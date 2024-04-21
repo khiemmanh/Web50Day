@@ -84,6 +84,32 @@ button i{
     display: block;
 }
 
+/* toggle button to change icon */
+button i{
+    display: inline;
+    cursor: pointer;
+    padding: 3px;
+    /* border: 1px solid; */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button .fa-times {
+    display: none;
+}
+
+.faq.active button .fa-times {
+    display: block;
+}
+
+.faq.active button .fa-chevron-down {
+    display: none;
+}
+
+
+
+
+
 
 
 /* 
