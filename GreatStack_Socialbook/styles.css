@@ -108,7 +108,7 @@ nav {
 }
 
 .left-sidebar {
-    background: #cbdffa;
+    /* background: #cbdffa; */
     flex-basis: 25%;
     position: sticky;
     top: 70px;
@@ -127,6 +127,94 @@ nav {
 
 .main-content {
     flex-basis: 47%;
+    /* height: 100vh; */
 }
 
+/* Left sidebar */
 
+.imp-link a,
+.shortcut-links a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #626262;
+    width: fit-content;
+}
+
+.imp-link a img {
+    width: 25px;
+    margin-right: 15px;
+}
+
+.imp-link a:last-child {
+    color: #1876f2;
+}
+
+.imp-link {
+    border-bottom: 1px solid #ccc;
+}
+
+/* shotcut links */
+.shortcut-links a img {
+    width: 40px;
+    margin-right: 15px;
+    border-radius: 4px;
+}
+
+.shortcut-links p {
+    margin: 25px 0;
+    color: #626262;
+    font-weight: 500;
+}
+
+/* --------- This is my code for left slidebar --------- */
+/* .imp-link {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.imp-link a {
+    text-decoration: none;
+    color: #626060;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.imp-link a img {
+    width: 20px;
+    margin-right: 10px;
+} */
+/* --------- End this is my code for left slidebar --------- */
+
+
+
+
+
+/* .status {
+    display: flex;
+    width: 100%;
+}
+
+.block {
+    position: relative;
+    width: 100px;
+    height: 150px;
+    margin: 0px 5px;
+}
+
+.block .img-avata {
+    width: 25px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    border-radius: 50%;
+    border: 3px #1876f2 solid;
+}
+
+.block .img-status {
+    width: 100%;
+    border-radius: 5px;
+} */
