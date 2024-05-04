@@ -114,7 +114,7 @@ nav {
     position: sticky;
     top: 70px;
     align-self: flex-start;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .right-sidebar {
@@ -257,6 +257,32 @@ nav {
 }
 
 
+.sidebar-ads {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.online-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.online-list img {
+    width: 40px;
+    border-radius: 50px;
+}
+
+.online-list p {
+    margin-left: 20px;
+
+}
+
+.online-list .online::after {
+    top: unset;
+    bottom: 0;
+}
 
 
 /* End CSS for right sidebar */
