@@ -363,29 +363,76 @@ CSS_NOTE: căn giữa đối tượng sử dụng flex */
 /* end story gallery */
 
 
-
-/* .status {
-    display: flex;
-    width: 100%;
-}
-
-.block {
-    position: relative;
-    width: 100px;
-    height: 150px;
-    margin: 0px 5px;
-}
-
-.block .img-avata {
-    width: 25px;
-    position: absolute;
-    top: 10px;
-    left: 5px;
-    border-radius: 50%;
-    border: 3px #1876f2 solid;
-}
-
-.block .img-status {
-    width: 100%;
+/* start write post container */
+.write-post-container {
+    background: #fff;
+    margin-bottom: 15px;
     border-radius: 5px;
-} */
+    padding: 15px;
+    columns: #626262;
+}
+
+.write-post-user {
+    display: flex;
+    align-items: center;
+}
+
+.write-post-user div {
+    /* CSS_NOTE: Điều chỉnh khoảng các giữa các dòng */
+    /* line-height: 18px; */
+    color: #626262;
+}
+
+.write-post-user img {
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.write-post-user p {
+    margin-bottom: -5px;
+    font-weight: 500px;
+}
+
+.write-post-user small {
+    font-size: 12px;
+}
+
+.post-input-container {
+    padding-left: 55px;
+    margin-top: 20px;
+}
+
+.post-input-container textarea{
+    width: 100%;
+    /* CSS_NOTE: style for input element */
+    outline: 0;
+    border: 0;
+    resize: none;
+
+    background: transparent;
+    border-bottom: 1px #ccc solid;
+    font-size: 15px;
+    color: #626262;
+}
+
+.add-post-links {
+    display: flex;
+    /* align-items: center; */
+    margin-top: 10px;
+}
+
+.add-post-links a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #ccc;
+    font-size: 13px;
+    padding-right: 30px;
+}
+
+.add-post-links img {
+    width: 20px;
+    margin-right: 10px;
+}
+/* end write post container */
