@@ -372,29 +372,29 @@ CSS_NOTE: căn giữa đối tượng sử dụng flex */
     columns: #626262;
 }
 
-.write-post-user {
+.user-profile {
     display: flex;
     align-items: center;
 }
 
-.write-post-user div {
+.user-profile div {
     /* CSS_NOTE: Điều chỉnh khoảng các giữa các dòng */
     /* line-height: 18px; */
     color: #626262;
 }
 
-.write-post-user img {
+.user-profile img {
     width: 45px;
     border-radius: 50%;
     margin-right: 10px;
 }
 
-.write-post-user p {
+.user-profile p {
     margin-bottom: -5px;
     font-weight: 500px;
 }
 
-.write-post-user small {
+.user-profile small {
     font-size: 12px;
 }
 
@@ -436,3 +436,44 @@ CSS_NOTE: căn giữa đối tượng sử dụng flex */
     margin-right: 10px;
 }
 /* end write post container */
+
+/* start post container */
+.post-container {
+    width: 100%;
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    color: #626262;
+    margin: 20px 0;
+}
+
+.post-container span {
+    font-size: 13px;
+    color: #9a9a9a;
+}
+
+.post-text {
+    color: #9a9a9a;
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+.post-text span {
+    color: #626262;
+    font-weight: 500;
+}
+
+.post-text a {
+    color: #1876f2;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.post-img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+/* end post container */
+
