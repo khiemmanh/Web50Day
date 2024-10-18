@@ -22,3 +22,40 @@
     background-color: chocolate;
     border: 1px solid rgb(50, 50, 50);
 }
+
+/* css responsive */
+
+/* small smartphone  */
+@media (max-width: 576px){
+    .box{
+        background-color: blueviolet;
+    }
+}
+
+/* tablet screen (576 - 768)*/
+@media (min-width: 576px) and (max-width: 768px){
+    .box{
+        background-color: rgb(112, 197, 167);
+    }
+}
+
+/* Horizontal tablet screen (768px to 992px) */
+@media (min-width: 768px) and (max-width: 992px){
+    .box{
+        background-color: rgb(84, 223, 76);
+    }
+}
+
+/* laptop screen (992px to 1200px) */
+@media (min-width: 992px) and (max-width: 1200px){
+    .box{
+        background-color: rgb(223, 76, 123);
+    }
+}
+
+/* desktop screen ( > 1200px)*/
+@media (min-width: 1200px) {
+    .box{
+        background-color: rgb(204, 223, 76);
+    }
+}
