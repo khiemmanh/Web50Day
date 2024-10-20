@@ -5,14 +5,22 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+}
+
 .box__container{
     border: 1px solid rgb(237, 48, 73);
     display: flex;
-    width: 120px;
+    width: 500px;
     height: 120px;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    margin: auto;
+    min-height: 100vh;
+    padding: 100px 0px;
+    position: relative;
     /* gap: 2px; */
 }
   
@@ -21,6 +29,17 @@
     height: 30px;
     background-color: chocolate;
     border: 1px solid rgb(50, 50, 50);
+}
+
+.box_3{
+    background-color: rgb(72, 183, 28) !important;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%); /* center of a object with position absolute */
+    /* transform: translateX(100%); */
+    /* margin: auto; */
+    /* right: -50%; */
 }
 
 /* css responsive */
