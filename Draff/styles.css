@@ -18,7 +18,7 @@ body{
     justify-content: center;
     align-items: start;
     margin: auto;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 100px 0px;
     position: relative;
     /* gap: 2px; */
@@ -77,4 +77,25 @@ body{
     .box{
         background-color: rgb(204, 223, 76);
     }
+}
+
+/* Display grid */
+.grid__container {
+    margin-top: 50px;
+    border: 1px solid rgb(7, 39, 249);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 348px));
+    gap: 20px;
+    row-gap: 10px;
+    justify-items: right;
+    /* align-items: center; */
+    /* text-align: center; */
+
+    justify-content: center;
+}
+
+.grid {
+    padding: auto;
+    height: 50px;
+    align-items: center;
 }
