@@ -1,3 +1,5 @@
+
+
 *{
     margin: 0;
     padding: 0;
@@ -7,10 +9,80 @@
 
 .container{
     margin: 0 2rem;
-    padding-top: 1.5rem;
+    padding: 1.5rem;
 }
 
 .header__main{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    right: 0;
+    background: transparent;
+    margin-bottom: -6rem;
+    z-index: 1;
+}
+
+.nav__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+    padding: 15px 0;
+}
+
+.nav_item li{
+    list-style: none;
+}
+
+/* slide */
+.slide{
+    position: relative;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.slide .slide__content{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.slide__content-title{
+    font-size: 5rem;
+    font-weight: normal;
+}
+
+/* button btn */
+.btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: rgb(77, 75, 75);
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 1.3rem;
+}
+
+.btn i{
+    font-size: 0.7rem;
+}
+
+/* sale noti */
+.sale__noti{
+    padding: 2rem 0;
+    background-color: #fcffb2;
 }
