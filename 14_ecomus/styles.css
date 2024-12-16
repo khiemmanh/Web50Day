@@ -185,3 +185,31 @@ img{
 .cate__cart-new-item i{
     font-size: 21px;
 }
+
+/* Best Seller */
+
+.product__container{
+    display: flex;
+    gap: 1.8rem;
+    flex: 0 0 auto;
+}
+
+.cart__product__wapper{
+    position: relative;
+}
+
+.cart__product__wapper-img{
+    position: relative;
+    /* z-index: 1; */
+}
+
+.cart__product__wapper-img img{
+    object-position: center;
+    display: block; /* make img__hover full size */
+}
+
+.cart__product__wapper-img .img__hover{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
