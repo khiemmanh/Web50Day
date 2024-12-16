@@ -144,6 +144,14 @@ img{
     overflow: hidden;
 }
 
+.hover-image img{
+    transition: transform 1.5s cubic-bezier(0, 0, 0.44, 1.18);
+}
+
+.hover-image img:hover{
+    transform: scale(1.06);
+}
+
 .cate__cart_01 .cate__cart__title{
     position: absolute;
     left: 1rem;
